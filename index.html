@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Year 9 Python Basics Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="./course.css">
+</head>
+<body>
+  <div class="app">
+    <header class="toolbar">
+      <a class="btn small" href="../index.html" title="Go to Debug challenges">Debug</a>
+      <a class="btn small" href="../lessons/index.html" title="Go to Lessons">Lessons</a>
+      <button id="btn-run" class="btn primary" disabled title="Run (Ctrl+Enter)">▶ Run</button>
+      <button id="btn-check" class="btn test" disabled title="Check your code against this lesson's tests">✓ Check</button>
+      <button id="btn-debug" class="btn accent" disabled title="Run step by step">⏭ Debug</button>
+      <button id="btn-stop" class="btn danger" disabled>■ Stop</button>
+      <select id="lessonSelect" title="Choose a lesson"></select>
+      <button id="btn-reset" class="btn small" title="Reset starter code">↺ Reset</button>
+      <span id="status" class="status">Loading Python…</span>
+      <span class="spacer"></span>
+      <button id="btn-font-down" class="btn small" title="Smaller text">A-</button>
+      <button id="btn-font-up" class="btn small" title="Bigger text">A+</button>
+      <div class="theme-menu-wrap">
+        <button id="btn-theme" class="btn small" title="Select theme">Theme &#9662;</button>
+        <div id="theme-menu" class="theme-menu hidden"></div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="pane instructions-pane">
+        <div class="exercise-header">
+          <p class="lesson-section" id="lesson-section"></p>
+          <p class="lesson-kicker" id="lesson-kicker"></p>
+          <h2 id="lesson-title">Loading…</h2>
+          <p id="lesson-focus" class="lesson-focus"></p>
+          <div id="lesson-concept" class="lesson-concept"></div>
+          <div id="lesson-primm" class="lesson-primm"></div>
+          <div id="lesson-learning" class="lesson-learning"></div>
+          <div id="lesson-tasks" class="lesson-tasks"></div>
+        </div>
+      </section>
+
+      <div class="work-column">
+        <section class="pane editor-pane">
+          <div id="editor"></div>
+        </section>
+
+        <section class="pane bottom-pane">
+          <nav class="tabs" role="tablist">
+            <button id="tab-output" class="tab active" role="tab">Output</button>
+            <button id="tab-debugger" class="tab" role="tab">Debugger</button>
+            <span class="spacer"></span>
+            <button id="btn-clear" class="btn small">Clear</button>
+          </nav>
+
+          <div id="panel-output" class="panel">
+            <div id="terminal" class="terminal" tabindex="0"></div>
+          </div>
+
+          <div id="panel-debugger" class="panel hidden">
+            <div class="dbg-controls">
+              <button id="dbg-first" class="btn small" title="First step">⏮</button>
+              <button id="dbg-back" class="btn small" title="Step back">◀ Back</button>
+              <button id="dbg-next" class="btn small primary" title="Step forward">Step ▶</button>
+              <button id="dbg-last" class="btn small" title="Last step">⏭</button>
+              <button id="dbg-play" class="btn small" title="Play automatically">▶▶ Auto</button>
+              <input id="dbg-slider" type="range" min="0" max="0" value="0" aria-label="Step">
+              <span id="dbg-count" class="dbg-count">—</span>
+            </div>
+            <div class="dbg-body">
+              <div class="dbg-col">
+                <h3>Variables</h3>
+                <div id="dbg-vars" class="dbg-vars"></div>
+              </div>
+              <div class="dbg-col">
+                <h3>Next line to run</h3>
+                <div id="dbg-next-line" class="dbg-next-line"></div>
+                <h3>Output so far</h3>
+                <pre id="dbg-output" class="dbg-output"></pre>
+              </div>
+            </div>
+            <div id="dbg-empty" class="dbg-empty">Press <b>Debug</b> to run your code step by step.</div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="./course.js"></script>
+</body>
+</html>

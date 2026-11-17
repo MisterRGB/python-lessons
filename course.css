@@ -1,0 +1,113 @@
+.instructions-pane {
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+}
+.instructions-pane .exercise-header { flex: 0 0 auto; }
+
+.work-column {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  min-width: 0;
+  min-height: 0;
+}
+.editor-pane {
+  min-height: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--border);
+}
+.bottom-pane { min-height: 0; }
+
+@media (max-width: 800px) {
+  .workspace { grid-template-rows: auto 1fr; }
+  .instructions-pane {
+    max-height: 38vh;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.terminal .ok { color: var(--primary); font-weight: 600; }
+.terminal .bad { color: var(--err); font-weight: 600; }
+
+.lesson-section {
+  margin: 0 0 2px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.lesson-kicker {
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.lesson-concept {
+  margin: 8px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.lesson-concept h4 { margin: 0 0 6px; font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+.lesson-focus {
+  margin: 6px 0 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.lesson-learning, .lesson-primm {
+  margin: 8px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent-bg, var(--panel)) 45%, transparent);
+}
+.lesson-learning h4, .lesson-primm h4, .lesson-tasks h4 {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.lesson-learning ul {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.5;
+}
+.lesson-primm ol {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+.lesson-primm li { margin: 4px 0; }
+.lesson-primm .primm-label { font-weight: 700; color: var(--text); }
+.lesson-tasks { margin: 8px 0 0; }
+.lesson-task {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-left: 3px solid var(--accent);
+  background: var(--bg);
+  border-radius: 0 6px 6px 0;
+}
+.lesson-task .hint {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+}
+.lesson-task .hint-line + .hint-line { margin-top: 2px; }
+.lesson-task .hint-toggle {
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.lesson-task .hint-toggle:hover { color: var(--text); }

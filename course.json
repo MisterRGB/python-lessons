@@ -1,0 +1,1528 @@
+{
+  "lessons": [
+    {
+      "id": "s1a",
+      "section": "Section 1: First Steps with Python",
+      "subsection": "1A. print() and output",
+      "kind": "lesson",
+      "title": "1A. Print messages to the screen",
+      "subtitle": "Learn one small thing at a time: showing output",
+      "focus": "print(), strings in quotes, running top-to-bottom",
+      "concept": "Programs are instructions that run from top to bottom. print() shows text on the screen. Text in Python is called a string (text) and must go inside quotes.",
+      "learning": [
+        "Code runs in order from top to bottom",
+        "print() displays output",
+        "Strings (text) go inside quotes like \"Hello\""
+      ],
+      "starter": "print(\"Hello, world!\")",
+      "tasks": [
+        {
+          "prompt": "Change the message to say Hello, Year 9!.",
+          "hint": "print(\"Hello, Year 9!\")"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "hello year 9"
+          ],
+          "codeContains": [
+            "Hello, Year 9!"
+          ],
+          "codeNotContains": [
+            "Hello, world!"
+          ]
+        }
+      ],
+      "primm": {
+        "predict": "What will appear on the screen?",
+        "run": "Run the code and check.",
+        "investigate": "print() sends the string inside the brackets to the output. The quotes mark the start and end of text.",
+        "modify": "Change the words inside the quotes.",
+        "make": "Make it print a greeting with your name."
+      }
+    },
+    {
+      "id": "s1b",
+      "section": "Section 1: First Steps with Python",
+      "subsection": "1B. Strings and quotes",
+      "kind": "lesson",
+      "title": "1B. Text must be in quotes",
+      "subtitle": "Tiny exercise: fix and use strings",
+      "focus": "strings, single vs double quotes",
+      "concept": "A string is a sequence of characters (text). In Python you can use single or double quotes. If your text contains an apostrophe, double quotes can make it easier.",
+      "learning": [
+        "Strings (text) are data made of characters",
+        "Use 'single' or \"double\" quotes",
+        "Quotes tell Python where the text (string) starts and ends"
+      ],
+      "starter": "print(\"Python is fun\")\nprint('I am learning')",
+      "tasks": [
+        {
+          "prompt": "Add a print line that says It's a sunny day using double quotes.",
+          "hint": "print(\"It's a sunny day\")"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "python is fun",
+            "i am learning",
+            "it's a sunny day"
+          ],
+          "codeRegex": [
+            "print\\(\\s*\\\"It's a sunny day\\\"\\s*\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1c",
+      "section": "Section 1: First Steps with Python",
+      "subsection": "1C. Sequencing",
+      "kind": "lesson",
+      "title": "1C. Run in order",
+      "subtitle": "Tiny exercise: predict the order",
+      "focus": "top-to-bottom execution",
+      "concept": "Python executes one line at a time from top to bottom. The order of your print statements controls the order of output.",
+      "learning": [
+        "Each line runs after the previous one",
+        "Changing order changes output"
+      ],
+      "starter": "print(\"First\")\nprint(\"Second\")\nprint(\"Third\")",
+      "tasks": [
+        {
+          "prompt": "Reorder the lines so the output is Third, Second, First.",
+          "hint": "Move the print lines into that order."
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "third",
+            "second",
+            "first"
+          ],
+          "codeNotRegex": [
+            "print\\(\\s*\\\"First\\\"\\s*\\)\\s*\\n\\s*print\\(\\s*\\\"Second\\\"\\s*\\)\\s*\\n\\s*print\\(\\s*\\\"Third\\\"\\s*\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1test",
+      "section": "Section 1: First Steps with Python",
+      "subsection": "Section 1 Test",
+      "kind": "section-test",
+      "title": "Section 1 Test: First program",
+      "subtitle": "Put it together: print and sequencing",
+      "focus": "print(), strings, order",
+      "concept": "Create a short program from scratch using print() and strings. This tests the core ideas from Section 1.",
+      "learning": [
+        "Use print() to show messages",
+        "Use strings (text) in quotes",
+        "Run lines in the correct order"
+      ],
+      "starter": "# Section 1 Test\n# Write your code below\n",
+      "tasks": [
+        {
+          "prompt": "Print exactly three lines in this order: Welcome, Python basics, Let's code!",
+          "hint": "Use three print() statements, one per line."
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 1 Test",
+          "expect": [
+            "welcome",
+            "python basics",
+            "let's code"
+          ],
+          "codeRegex": [
+            "print\\(.*Welcome",
+            "print\\(.*Python basics",
+            "print\\(.*Let's code"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2a",
+      "section": "Section 2: Variables and Data Types",
+      "subsection": "2A. Variables",
+      "kind": "lesson",
+      "title": "2A. Store values in variables",
+      "subtitle": "Learn one small thing at a time: labels for values",
+      "focus": "variables, assignment, updating values",
+      "concept": "A variable stores a value in memory and gives it a name (label). You create/update it with =. You can change a variable's value later.",
+      "learning": [
+        "age = 20 stores a value in a variable",
+        "Variables can be updated",
+        "Use clear names"
+      ],
+      "starter": "age = 20\nprint(age)\nage = 30\nprint(age)",
+      "tasks": [
+        {
+          "prompt": "Create a variable called score set to 10, print it, change it to 15, print it again.",
+          "hint": "score = 10\nprint(score)\nscore = 15\nprint(score)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "20",
+            "30",
+            "10",
+            "15"
+          ],
+          "codeContains": [
+            "score"
+          ],
+          "codeRegex": [
+            "score\\s*=\\s*10",
+            "score\\s*=\\s*15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2b",
+      "section": "Section 2: Variables and Data Types",
+      "subsection": "2B. Integers (int)",
+      "kind": "lesson",
+      "title": "2B. Whole numbers: int",
+      "subtitle": "Tiny exercise: use whole numbers",
+      "focus": "int type, whole numbers",
+      "concept": "Integers (int) are whole numbers (no decimal point) like 0, 7, 20, -3. You can store them in variables and print them.",
+      "learning": [
+        "int means a whole number (no decimal point)",
+        "No quotes around numbers when you want numeric values"
+      ],
+      "starter": "students = 25\nprint(students)\nprint(type(students))",
+      "tasks": [
+        {
+          "prompt": "Create year_level = 9 and print Year level: and the value.",
+          "hint": "year_level = 9\nprint(\"Year level:\", year_level)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "25",
+            "class int",
+            "year level",
+            "9"
+          ],
+          "codeContains": [
+            "year_level"
+          ],
+          "codeRegex": [
+            "year_level\\s*=\\s*9",
+            "print\\(.*Year level"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2c",
+      "section": "Section 2: Variables and Data Types",
+      "subsection": "2C. Floats (float)",
+      "kind": "lesson",
+      "title": "2C. Decimal numbers: float",
+      "subtitle": "Tiny exercise: numbers with decimals",
+      "focus": "float type, decimal point",
+      "concept": "Floats (float) are decimal numbers with a decimal point, like 19.95 or 1.6. Python uses them for decimal values.",
+      "learning": [
+        "float means a decimal number (with a decimal point)",
+        "19.95 is a float (decimal), 19 is an int (whole number)"
+      ],
+      "starter": "price = 19.95\nprint(price)\nprint(type(price))",
+      "tasks": [
+        {
+          "prompt": "Create height = 1.62 and print Height: and the value.",
+          "hint": "height = 1.62\nprint(\"Height:\", height)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "19.95",
+            "class float",
+            "height",
+            "1.62"
+          ],
+          "codeContains": [
+            "height"
+          ],
+          "codeRegex": [
+            "height\\s*=\\s*1\\.62",
+            "print\\(.*Height"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2d",
+      "section": "Section 2: Variables and Data Types",
+      "subsection": "2D. Strings (str)",
+      "kind": "lesson",
+      "title": "2D. Text values: str",
+      "subtitle": "Tiny exercise: store and print text",
+      "focus": "str type, text in variables",
+      "concept": "Strings (str) store text (words and sentences). When you assign text to a variable, keep it in quotes.",
+      "learning": [
+        "str means text (a string)",
+        "first_name = \"Aroha\" stores a string (text)"
+      ],
+      "starter": "first_name = \"Aroha\"\nprint(first_name)\nprint(type(first_name))",
+      "tasks": [
+        {
+          "prompt": "Create city = \"Auckland\" (or your city) and print City: and the value.",
+          "hint": "city = \"Auckland\"\nprint(\"City:\", city)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "aroha",
+            "class str",
+            "city"
+          ],
+          "codeContains": [
+            "city"
+          ],
+          "codeRegex": [
+            "city\\s*=\\s*[\\\"']",
+            "print\\(.*City"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2e",
+      "section": "Section 2: Variables and Data Types",
+      "subsection": "2E. Booleans (bool)",
+      "kind": "lesson",
+      "title": "2E. True/False: bool",
+      "subtitle": "Tiny exercise: yes/no values",
+      "focus": "bool type, True/False, case sensitivity",
+      "concept": "Booleans (bool) have only two values: True and False (capital T/F). They represent yes/no or on/off.",
+      "learning": [
+        "bool values are True or False (a yes/no type)",
+        "Python is case-sensitive: true is not the same as True"
+      ],
+      "starter": "is_online = True\nprint(is_online)\nprint(type(is_online))",
+      "tasks": [
+        {
+          "prompt": "Create has_homework = False and print Homework done: and the value.",
+          "hint": "has_homework = False\nprint(\"Homework done:\", has_homework)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "true",
+            "class bool",
+            "homework done",
+            "false"
+          ],
+          "codeContains": [
+            "has_homework"
+          ],
+          "codeRegex": [
+            "has_homework\\s*=\\s*False",
+            "print\\(.*Homework done"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2f",
+      "section": "Section 2: Variables and Data Types",
+      "subsection": "2F. Naming and case sensitivity",
+      "kind": "lesson",
+      "title": "2F. Good variable names",
+      "subtitle": "Tiny exercise: readable names",
+      "focus": "snake_case, case sensitivity",
+      "concept": "Use clear names. For multiple words use snake_case (e.g. first_name). Python is case-sensitive: age, Age, and AGE are different variables.",
+      "learning": [
+        "snake_case uses underscores",
+        "Names should describe the value",
+        "Case matters in Python"
+      ],
+      "starter": "first_name = \"Sam\"\nlast_name = \"Lee\"\nprint(first_name, last_name)",
+      "tasks": [
+        {
+          "prompt": "Create favourite_food using snake_case and print it.",
+          "hint": "favourite_food = \"pizza\"\nprint(favourite_food)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "sam",
+            "lee"
+          ],
+          "codeContains": [
+            "favourite_food"
+          ],
+          "codeRegex": [
+            "favourite_food\\s*=",
+            "print\\(.*favourite_food"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2test",
+      "section": "Section 2: Variables and Data Types",
+      "subsection": "Section 2 Test",
+      "kind": "section-test",
+      "title": "Section 2 Test: Variables and types",
+      "subtitle": "Put it together: int, float, str, bool",
+      "focus": "variables and core data types",
+      "concept": "Create a small profile using the right data types. This tests your understanding of variables, ints, floats, strings, and booleans.",
+      "learning": [
+        "Use int (whole number) for values with no decimal point",
+        "Use float (decimal number) for values with a decimal point",
+        "Use str (text) for words and sentences, and bool (True/False) for yes/no values"
+      ],
+      "starter": "# Section 2 Test: create a student profile\n# Use variables: student_name (str), age (int), height_m (float), is_enrolled (bool)\n",
+      "tasks": [
+        {
+          "prompt": "Create student_name (str), age (int), height_m (float), is_enrolled (bool) and print each with a label.",
+          "hint": "Example: student_name = \"Alex\"\nage = 14\nheight_m = 1.58\nis_enrolled = True"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 2 Test",
+          "expect": [
+            "class str",
+            "class int",
+            "class float",
+            "class bool"
+          ],
+          "codeContains": [
+            "student_name",
+            "age",
+            "height_m",
+            "is_enrolled"
+          ],
+          "codeRegex": [
+            "print\\(.*type\\(student_name\\)\\)",
+            "print\\(.*type\\(age\\)\\)",
+            "print\\(.*type\\(height_m\\)\\)",
+            "print\\(.*type\\(is_enrolled\\)\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3a",
+      "section": "Section 3: Input and Strings Together",
+      "subsection": "3A. Getting user input",
+      "kind": "lesson",
+      "title": "3A. Read input with input()",
+      "subtitle": "Learn one small thing at a time: user interaction",
+      "focus": "input(), prompts, strings",
+      "concept": "input() shows a prompt and waits for the user to type. It returns what the user typed as a string (text).",
+      "learning": [
+        "input(\"Question: \") returns the user's text (a string)",
+        "The result is always a string (text)",
+        "Store it in a variable to use later"
+      ],
+      "starter": "name = input(\"What is your name? \")\nprint(name)",
+      "tasks": [
+        {
+          "prompt": "Ask for the user's favourite subject and print it.",
+          "hint": "subject = input(\"Favourite subject? \")\nprint(subject)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "inputs": [
+            "Sam",
+            "Maths"
+          ],
+          "expect": [
+            "sam",
+            "maths"
+          ],
+          "codeRegex": [
+            "subject\\s*=\\s*input\\(",
+            "print\\(\\s*subject\\s*\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3b",
+      "section": "Section 3: Input and Strings Together",
+      "subsection": "3B. Joining strings (concatenation)",
+      "kind": "lesson",
+      "title": "3B. Combine text with +",
+      "subtitle": "Tiny exercise: build messages",
+      "focus": "string concatenation, spaces",
+      "concept": "You can join strings (text) with +. This is called concatenation. Remember to include spaces inside quotes when needed.",
+      "learning": [
+        "\"Hello \" + name joins strings (text)",
+        "Spaces must be added manually",
+        "All parts must be strings (text) when using + this way"
+      ],
+      "starter": "name = input(\"Name: \")\nprint(\"Hello \" + name)",
+      "tasks": [
+        {
+          "prompt": "Ask for a city and print: Sam is from Auckland (using the inputs).",
+          "hint": "city = input(\"City: \")\nprint(name + \" is from \" + city)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "inputs": [
+            "Sam",
+            "Auckland"
+          ],
+          "expect": [
+            "hello sam",
+            "sam is from auckland"
+          ],
+          "codeRegex": [
+            "city\\s*=\\s*input\\(",
+            "is from",
+            "print\\(.*\\+.*city"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3test",
+      "section": "Section 3: Input and Strings Together",
+      "subsection": "Section 3 Test",
+      "kind": "section-test",
+      "title": "Section 3 Test: Interactive greeting",
+      "subtitle": "Put it together: input and string joining",
+      "focus": "input(), variables, concatenation",
+      "concept": "Build a small interactive program that asks questions and prints a personalised message.",
+      "learning": [
+        "Use input() to get user data",
+        "Store values in variables",
+        "Concatenate (join) strings (text) into a sentence"
+      ],
+      "starter": "# Section 3 Test\n# Ask for name and favourite food, then print a sentence using both\n",
+      "tasks": [
+        {
+          "prompt": "Ask for name and favourite food, then print: <name> likes <food>.",
+          "hint": "name = input(\"Name: \")\nfood = input(\"Favourite food: \")\nprint(name + \" likes \" + food + \".\")"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 3 Test",
+          "inputs": [
+            "Aroha",
+            "sushi"
+          ],
+          "expect": [
+            "aroha likes sushi"
+          ],
+          "codeRegex": [
+            "input\\(",
+            "likes",
+            "print\\(.*\\+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4a",
+      "section": "Section 4: Type Conversion",
+      "subsection": "4A. Why conversion matters",
+      "kind": "lesson",
+      "title": "4A. Strings vs numbers",
+      "subtitle": "Learn one small thing at a time: types affect behavior",
+      "focus": "input returns string, int()",
+      "concept": "input() returns a string (text), so \"10\" + \"20\" becomes \"1020\" (text joined), not 30. To do maths, convert to numbers with int() (whole number) or float() (decimal number).",
+      "learning": [
+        "input() gives strings (text)",
+        "int(\"10\") converts text to an int (whole number)",
+        "Convert before doing arithmetic"
+      ],
+      "starter": "first = input(\"First number: \")\nsecond = input(\"Second number: \")\nprint(first + second)  # joins strings\nprint(int(first) + int(second))  # adds numbers",
+      "tasks": [
+        {
+          "prompt": "Run with 10 and 20, then explain in a comment what each print does.",
+          "hint": "# first print joins text, second adds numbers"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "inputs": [
+            "10",
+            "20"
+          ],
+          "expect": [
+            "1020",
+            "30"
+          ],
+          "codeContains": [
+            "#"
+          ],
+          "codeRegex": [
+            "print\\(first\\s*\\+\\s*second\\)",
+            "print\\(int\\(first\\)\\s*\\+\\s*int\\(second\\)\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4b",
+      "section": "Section 4: Type Conversion",
+      "subsection": "4B. int() and float()",
+      "kind": "lesson",
+      "title": "4B. Convert to numbers",
+      "subtitle": "Tiny exercise: numeric conversion",
+      "focus": "int(), float()",
+      "concept": "Use int() for whole numbers and float() for decimals. Converting input lets you calculate correctly.",
+      "learning": [
+        "int() -> whole number (no decimal point)",
+        "float() -> decimal number (with a decimal point)",
+        "Choose based on the data you expect"
+      ],
+      "starter": "age_text = input(\"Age: \")\nage = int(age_text)\nprint(age + 1)",
+      "tasks": [
+        {
+          "prompt": "Ask for a price as input, convert to float, add 2.5, and print Total: with the result.",
+          "hint": "price = float(input(\"Price: \"))\nprint(\"Total:\", price + 2.5)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Starter check",
+          "inputs": [
+            "13",
+            "10"
+          ],
+          "expect": [
+            "14"
+          ]
+        },
+        {
+          "label": "Task 1",
+          "inputs": [
+            "13",
+            "10"
+          ],
+          "expect": [
+            "14",
+            "total",
+            "12.5"
+          ],
+          "codeRegex": [
+            "float\\(input\\(",
+            "price",
+            "Total",
+            "\\+\\s*2\\.5|2\\.5\\s*\\+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4c",
+      "section": "Section 4: Type Conversion",
+      "subsection": "4C. str() and combining text with numbers",
+      "kind": "lesson",
+      "title": "4C. Convert numbers to text for messages",
+      "subtitle": "Tiny exercise: build output safely",
+      "focus": "str(), concatenation with +",
+      "concept": "When joining with +, all parts must be strings (text). Use str() to convert a number to text in a message.",
+      "learning": [
+        "str(30) turns a number into text (a string)",
+        "+ needs strings (text) when concatenating text",
+        "print can also separate values with commas"
+      ],
+      "starter": "result = 10 + 20\nprint(\"Result: \" + str(result))",
+      "tasks": [
+        {
+          "prompt": "Calculate 7 * 6, store it in answer, and print Answer: 42 using str().",
+          "hint": "answer = 7 * 6\nprint(\"Answer: \" + str(answer))"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "result 30",
+            "answer 42"
+          ],
+          "codeRegex": [
+            "answer\\s*=\\s*7\\s*\\*\\s*6",
+            "str\\(answer\\)",
+            "Answer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4test",
+      "section": "Section 4: Type Conversion",
+      "subsection": "Section 4 Test",
+      "kind": "section-test",
+      "title": "Section 4 Test: Mini calculator",
+      "subtitle": "Put it together: input, conversion, output",
+      "focus": "input(), float/int, str(), arithmetic",
+      "concept": "Create a small calculator that reads two numbers, converts them, calculates, and prints clear results.",
+      "learning": [
+        "Convert input before maths",
+        "Use str() to convert numbers to text, or commas when printing",
+        "Show clear labels in output"
+      ],
+      "starter": "# Section 4 Test: add two numbers entered by the user and print Sum: <value>\n",
+      "tasks": [
+        {
+          "prompt": "Ask for two numbers (use float), add them, and print Sum: with the total.",
+          "hint": "a = float(input(\"First: \"))\nb = float(input(\"Second: \"))\nprint(\"Sum: \" + str(a + b))"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 4 Test (whole numbers)",
+          "inputs": [
+            "4",
+            "6"
+          ],
+          "expect": [
+            "sum 10"
+          ],
+          "codeRegex": [
+            "float\\(input\\(|int\\(input\\(",
+            "Sum",
+            "\\+"
+          ]
+        },
+        {
+          "label": "Section 4 Test (decimals)",
+          "inputs": [
+            "2.5",
+            "1.5"
+          ],
+          "expect": [
+            "sum 4"
+          ],
+          "codeRegex": [
+            "float\\(input\\(",
+            "Sum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5a",
+      "section": "Section 5: Strings in More Detail",
+      "subsection": "5A. String methods (upper/lower)",
+      "kind": "lesson",
+      "title": "5A. Change letter case",
+      "subtitle": "Tiny exercise: transform text",
+      "focus": "upper(), lower(), methods return new strings",
+      "concept": "Strings have methods (functions attached to the string). .upper() and .lower() return a new string; they do not change the original.",
+      "learning": [
+        "course.upper() returns uppercase text",
+        "Original string (text) stays the same (immutable)",
+        "Methods use dot notation"
+      ],
+      "starter": "course = \"Python for Beginners\"\nprint(course.upper())\nprint(course.lower())\nprint(course)",
+      "tasks": [
+        {
+          "prompt": "Create word = \"kia ora\" and print it in uppercase.",
+          "hint": "word = \"kia ora\"\nprint(word.upper())"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "python for beginners",
+            "python for beginners",
+            "kia ora"
+          ],
+          "codeRegex": [
+            "word\\s*=\\s*[\\\"']kia ora[\\\"']",
+            "\\.upper\\(\\)",
+            "print\\(word\\.upper\\(\\)\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5b",
+      "section": "Section 5: Strings in More Detail",
+      "subsection": "5B. find() and replace()",
+      "kind": "lesson",
+      "title": "5B. Search and replace text",
+      "subtitle": "Tiny exercise: locate and change parts",
+      "focus": "find(), replace(), immutability",
+      "concept": ".find() returns the index of text (or -1 if not found). .replace() returns a new string with replacements made.",
+      "learning": [
+        "find() gives a position/index",
+        ".replace(old,new) returns a changed copy",
+        "Indexes start at 0"
+      ],
+      "starter": "course = \"Python for Beginners\"\nprint(course.find(\"for\"))\nprint(course.replace(\"Beginners\", \"Absolute Beginners\"))",
+      "tasks": [
+        {
+          "prompt": "Replace \"Python\" with \"Coding\" in course and print the result.",
+          "hint": "print(course.replace(\"Python\", \"Coding\"))"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "7",
+            "python for absolute beginners",
+            "coding for beginners"
+          ],
+          "codeRegex": [
+            "\\.replace\\(\\s*[\\\"']Python[\\\"']\\s*,\\s*[\\\"']Coding[\\\"']\\s*\\)",
+            "print\\(course\\.replace\\(\\s*[\\\"']Python[\\\"']\\s*,\\s*[\\\"']Coding[\\\"']\\s*\\)\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5c",
+      "section": "Section 5: Strings in More Detail",
+      "subsection": "5C. Indexing and in",
+      "kind": "lesson",
+      "title": "5C. Access characters and check membership",
+      "subtitle": "Tiny exercise: positions and searching",
+      "focus": "indexing from 0, in operator",
+      "concept": "You can access a character by index: course[0] is the first character. The in operator checks whether text appears in a string and returns True/False.",
+      "learning": [
+        "Indexing starts at 0",
+        "course[0] gets first character",
+        "\"Python\" in course returns True/False (a bool value)"
+      ],
+      "starter": "course = \"Python for Beginners\"\nprint(course[0])\nprint(\"Python\" in course)\nprint(\"Java\" in course)",
+      "tasks": [
+        {
+          "prompt": "Print the first character of your own name variable and check if 'a' is in it.",
+          "hint": "name = \"Sam\"\nprint(name[0])\nprint(\"a\" in name)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "p",
+            "true",
+            "false"
+          ],
+          "codeRegex": [
+            "name\\s*=\\s*[\\\"']",
+            "name\\[0\\]",
+            "in\\s+name",
+            "print\\(name\\[0\\]\\)",
+            "print\\(.*in\\s+name\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5test",
+      "section": "Section 5: Strings in More Detail",
+      "subsection": "Section 5 Test",
+      "kind": "section-test",
+      "title": "Section 5 Test: String skills",
+      "subtitle": "Put it together: methods, indexing, in",
+      "focus": "string methods, index, in",
+      "concept": "Use multiple string skills on one piece of text to show you understand how strings work.",
+      "learning": [
+        "Use at least one string (text) method",
+        "Use indexing or in",
+        "Print clear results"
+      ],
+      "starter": "text = \"python programming\"\n# Section 5 Test: work with the text variable\n",
+      "tasks": [
+        {
+          "prompt": "Print text in uppercase, print text[0], and print whether \"gram\" is in text.",
+          "hint": "print(text.upper())\nprint(text[0])\nprint(\"gram\" in text)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 5 Test",
+          "expect": [
+            "python programming",
+            "p",
+            "true"
+          ],
+          "codeRegex": [
+            "text\\.upper\\(\\)",
+            "text\\[0\\]",
+            "in\\s+text",
+            "gram"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6a",
+      "section": "Section 6: Numbers and Arithmetic",
+      "subsection": "6A. Basic operators",
+      "kind": "lesson",
+      "title": "6A. Add, subtract, multiply, divide",
+      "subtitle": "Tiny exercise: core maths operators",
+      "focus": "+ - * /",
+      "concept": "Python can calculate using arithmetic operators: + addition, - subtraction, * multiplication, / division (returns a float).",
+      "learning": [
+        "+ - * / perform calculations",
+        "/ gives a float (decimal number) result",
+        "Expressions produce values"
+      ],
+      "starter": "print(10 + 3)\nprint(10 - 3)\nprint(10 * 3)\nprint(10 / 3)",
+      "tasks": [
+        {
+          "prompt": "Print the result of 7 * 6 and 20 - 8.",
+          "hint": "print(7 * 6)\nprint(20 - 8)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "13",
+            "7",
+            "30",
+            "3.333",
+            "42",
+            "12"
+          ],
+          "codeRegex": [
+            "7\\s*\\*\\s*6",
+            "20\\s*-\\s*8",
+            "print\\(7\\s*\\*\\s*6\\)",
+            "print\\(20\\s*-\\s*8\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6b",
+      "section": "Section 6: Numbers and Arithmetic",
+      "subsection": "6B. //, %, **",
+      "kind": "lesson",
+      "title": "6B. Whole division, remainder, powers",
+      "subtitle": "Tiny exercise: more operators",
+      "focus": "// % **",
+      "concept": "// gives whole-number division, % gives the remainder, and ** raises to a power.",
+      "learning": [
+        "10 // 3 gives 3",
+        "10 % 3 gives 1",
+        "2 ** 3 gives 8"
+      ],
+      "starter": "print(10 // 3)\nprint(10 % 3)\nprint(2 ** 3)",
+      "tasks": [
+        {
+          "prompt": "Print 23 // 5 and 23 % 5.",
+          "hint": "print(23 // 5)\nprint(23 % 5)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "3",
+            "1",
+            "8",
+            "4",
+            "3"
+          ],
+          "codeRegex": [
+            "23\\s*//\\s*5",
+            "23\\s*%\\s*5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6c",
+      "section": "Section 6: Numbers and Arithmetic",
+      "subsection": "6C. Precedence and augmented assignment",
+      "kind": "lesson",
+      "title": "6C. Order of operations and shortcuts",
+      "subtitle": "Tiny exercise: control calculations",
+      "focus": "operator precedence, parentheses, +=",
+      "concept": "Multiplication/division happen before addition/subtraction unless parentheses change the order. Augmented assignment like x += 3 is shorthand for x = x + 3.",
+      "learning": [
+        "10 + 3 * 2 is 16",
+        "(10 + 3) * 2 is 26",
+        "x += 3 updates x by adding 3"
+      ],
+      "starter": "print(10 + 3 * 2)\nprint((10 + 3) * 2)\nx = 10\nx += 5\nprint(x)",
+      "tasks": [
+        {
+          "prompt": "Create score = 20, subtract 7 using -=, and print Score: and the value.",
+          "hint": "score = 20\nscore -= 7\nprint(\"Score:\", score)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "16",
+            "26",
+            "15",
+            "score",
+            "13"
+          ],
+          "codeRegex": [
+            "score\\s*=\\s*20",
+            "score\\s*-=\\s*7",
+            "Score"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6test",
+      "section": "Section 6: Numbers and Arithmetic",
+      "subsection": "Section 6 Test",
+      "kind": "section-test",
+      "title": "Section 6 Test: Number challenge",
+      "subtitle": "Put it together: arithmetic in context",
+      "focus": "operators, precedence, variables",
+      "concept": "Solve a small real-world number problem using arithmetic operators and variables.",
+      "learning": [
+        "Choose correct operators",
+        "Use variables to store values",
+        "Print labelled results"
+      ],
+      "starter": "# Section 6 Test: 23 lollies shared between 4 friends\nlollies = 23\nfriends = 4\n",
+      "tasks": [
+        {
+          "prompt": "Using lollies and friends, print how many each friend gets (whole number) and how many are left over.",
+          "hint": "print(\"Each:\", lollies // friends)\nprint(\"Left over:\", lollies % friends)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 6 Test",
+          "expect": [
+            "each",
+            "5",
+            "left over",
+            "3"
+          ],
+          "codeRegex": [
+            "lollies\\s*//\\s*friends",
+            "lollies\\s*%\\s*friends",
+            "Each",
+            "Left over"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s7a",
+      "section": "Section 7: Decisions (Comparisons and Logic)",
+      "subsection": "7A. Comparison operators",
+      "kind": "lesson",
+      "title": "7A. Compare values (True/False)",
+      "subtitle": "Tiny exercise: comparisons",
+      "focus": "> >= < <= == !=",
+      "concept": "Comparison operators compare values and produce booleans: True or False. Use == to check equality (not =, which assigns).",
+      "learning": [
+        "> < >= <= compare values",
+        "== checks equal, != checks not equal",
+        "Comparisons return True/False (bool values)"
+      ],
+      "starter": "x = 3\nprint(x > 2)\nprint(x == 3)\nprint(x != 3)",
+      "tasks": [
+        {
+          "prompt": "Set age = 14 and print whether age >= 13 and whether age < 18.",
+          "hint": "age = 14\nprint(age >= 13)\nprint(age < 18)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "true",
+            "true",
+            "false",
+            "true",
+            "true"
+          ],
+          "codeRegex": [
+            "age\\s*=\\s*14",
+            "age\\s*>=\\s*13",
+            "age\\s*<\\s*18"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s7b",
+      "section": "Section 7: Decisions (Comparisons and Logic)",
+      "subsection": "7B. Logical operators",
+      "kind": "lesson",
+      "title": "7B. Combine conditions with and/or/not",
+      "subtitle": "Tiny exercise: boolean logic",
+      "focus": "and, or, not",
+      "concept": "Logical operators combine conditions: and needs both True, or needs at least one True, not flips True/False.",
+      "learning": [
+        "and: both must be True",
+        "or: at least one True",
+        "not: reverses a bool (True/False) value"
+      ],
+      "starter": "price = 25\nprint(price > 10 and price < 30)\nprint(price > 10 or price > 100)\nprint(not price > 100)",
+      "tasks": [
+        {
+          "prompt": "Create temperature = 18 and print whether it is between 15 and 25 (inclusive of 15 and 25).",
+          "hint": "temperature = 18\nprint(temperature >= 15 and temperature <= 25)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "true",
+            "true",
+            "true",
+            "true"
+          ],
+          "codeRegex": [
+            "temperature\\s*=\\s*18",
+            "temperature\\s*>=\\s*15",
+            "temperature\\s*<=\\s*25",
+            "\\band\\b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s7c",
+      "section": "Section 7: Decisions (Comparisons and Logic)",
+      "subsection": "7C. if, elif, else",
+      "kind": "lesson",
+      "title": "7C. Make choices in code",
+      "subtitle": "Tiny exercise: branching",
+      "focus": "if/elif/else, indentation, blocks",
+      "concept": "if runs a block when a condition is True. elif checks another condition if previous ones were False. else runs if none matched. Indentation defines the block.",
+      "learning": [
+        "Use a colon after conditions",
+        "Indent the block (usually 4 spaces)",
+        "Python checks conditions top to bottom"
+      ],
+      "starter": "temperature = 25\nif temperature > 30:\n    print(\"Hot day\")\nelif temperature > 20:\n    print(\"Nice day\")\nelse:\n    print(\"Cold day\")\nprint(\"Done\")",
+      "tasks": [
+        {
+          "prompt": "Change temperature so the output includes Cold day, or add your own elif branch.",
+          "hint": "Try temperature = 5 or add elif temperature > 10:"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "cold day",
+            "done"
+          ],
+          "codeRegex": [
+            "temperature\\s*=\\s*(?:[0-9]|1[0-9]|20)\\b|elif\\s+temperature",
+            "if\\s+temperature|elif\\s+temperature|else:"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s7test",
+      "section": "Section 7: Decisions (Comparisons and Logic)",
+      "subsection": "Section 7 Test",
+      "kind": "section-test",
+      "title": "Section 7 Test: Decision maker",
+      "subtitle": "Put it together: comparisons, logic, if/elif/else",
+      "focus": "conditions and branching",
+      "concept": "Write a program that makes decisions based on a value using if/elif/else.",
+      "learning": [
+        "Use comparison operators",
+        "Use correct indentation",
+        "Handle multiple cases"
+      ],
+      "starter": "# Section 7 Test: set score and print a grade\nscore = 75\n",
+      "tasks": [
+        {
+          "prompt": "If score >= 80 print Merit, elif score >= 50 print Achieved, else print Not yet.",
+          "hint": "if score >= 80:\n    print(\"Merit\")\nelif score >= 50:\n    print(\"Achieved\")\nelse:\n    print(\"Not yet\")"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 7 Test",
+          "expect": [
+            "achieved"
+          ],
+          "codeRegex": [
+            "if\\s+score\\s*>=\\s*80",
+            "elif\\s+score\\s*>=\\s*50",
+            "Merit",
+            "Achieved",
+            "Not yet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s8a",
+      "section": "Section 8: While Loops",
+      "subsection": "8A. Basic while loop",
+      "kind": "lesson",
+      "title": "8A. Repeat while a condition is true",
+      "subtitle": "Tiny exercise: counting",
+      "focus": "while, condition, indentation",
+      "concept": "A while loop repeats a block as long as its condition is True. Use it when you want to repeat based on a condition.",
+      "learning": [
+        "while condition: starts the loop",
+        "Indented code is the loop body",
+        "Loop stops when condition becomes False"
+      ],
+      "starter": "i = 1\nwhile i <= 5:\n    print(i)\n    i = i + 1",
+      "tasks": [
+        {
+          "prompt": "Change the loop to print numbers 1 to 3.",
+          "hint": "Use while i <= 3:"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "1",
+            "2",
+            "3"
+          ],
+          "reject": [
+            "4"
+          ],
+          "codeRegex": [
+            "while\\s+i\\s*<=\\s*3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s8b",
+      "section": "Section 8: While Loops",
+      "subsection": "8B. Updating variables in loops",
+      "kind": "lesson",
+      "title": "8B. Avoid infinite loops",
+      "subtitle": "Tiny exercise: counters and updates",
+      "focus": "loop variable update, infinite loop prevention",
+      "concept": "You must change something inside the loop (like i += 1 or count -= 1) so the condition can become False. Otherwise the loop may run forever.",
+      "learning": [
+        "i += 1 increases i each time",
+        "Forgetting updates can cause infinite loops",
+        "Test loops with small ranges first"
+      ],
+      "starter": "count = 3\nwhile count > 0:\n    print(\"Count:\", count)\n    count -= 1\nprint(\"Go!\")",
+      "tasks": [
+        {
+          "prompt": "Make it count down from 5 to 1 and then print Go!.",
+          "hint": "Set count = 5"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "count 5",
+            "count 1",
+            "go"
+          ],
+          "codeRegex": [
+            "count\\s*=\\s*5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s8test",
+      "section": "Section 8: While Loops",
+      "subsection": "Section 8 Test",
+      "kind": "section-test",
+      "title": "Section 8 Test: Loop challenge",
+      "subtitle": "Put it together: while loops",
+      "focus": "while loops and counters",
+      "concept": "Use a while loop to produce repeated output correctly.",
+      "learning": [
+        "Set a starting value",
+        "Use a condition",
+        "Update each iteration"
+      ],
+      "starter": "# Section 8 Test: print numbers 1 to 5 using a while loop\n",
+      "tasks": [
+        {
+          "prompt": "Use a while loop to print numbers 1 to 5, one per line.",
+          "hint": "i = 1\nwhile i <= 5:\n    print(i)\n    i += 1"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 8 Test",
+          "expect": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "codeRegex": [
+            "\\bwhile\\b",
+            "print\\(i\\)|print\\(\\s*i\\s*\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s9a",
+      "section": "Section 9: Lists and For Loops",
+      "subsection": "9A. Lists and indexing",
+      "kind": "lesson",
+      "title": "9A. Store multiple items in a list",
+      "subtitle": "Tiny exercise: ordered collections",
+      "focus": "lists, indexing, negative indexing",
+      "concept": "Lists store multiple items in order using square brackets. Indexing starts at 0. Negative indexes count from the end (-1 is last).",
+      "learning": [
+        "names = [\"A\", \"B\"] creates a list",
+        "names[0] is first item",
+        "names[-1] is last item"
+      ],
+      "starter": "names = [\"John\", \"Bob\", \"Mosh\", \"Sam\"]\nprint(names)\nprint(names[0])\nprint(names[-1])",
+      "tasks": [
+        {
+          "prompt": "Create a list of 3 fruits and print the first and last fruit.",
+          "hint": "fruits = [\"apple\", \"banana\", \"orange\"]\nprint(fruits[0])\nprint(fruits[-1])"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "codeRegex": [
+            "=\\s*\\[[^\\]]*,[^\\]]*,[^\\]]*\\]",
+            "print\\(.*\\[0\\]\\)",
+            "print\\(.*\\[-1\\]\\)"
+          ],
+          "expect": [
+            "john",
+            "sam"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s9b",
+      "section": "Section 9: Lists and For Loops",
+      "subsection": "9B. Changing lists and useful tools",
+      "kind": "lesson",
+      "title": "9B. Update and inspect lists",
+      "subtitle": "Tiny exercise: append, insert, len, in",
+      "focus": "append, insert, remove, len, in, mutability",
+      "concept": "Lists are mutable (changeable). You can append/insert/remove items. len() gives the number of items and in checks if an item exists.",
+      "learning": [
+        "append() adds to the end",
+        "insert() adds at an index",
+        "len(list) counts items, item in list checks membership"
+      ],
+      "starter": "numbers = [1, 2, 3]\nnumbers.append(4)\nprint(numbers)\nprint(len(numbers))\nprint(2 in numbers)",
+      "tasks": [
+        {
+          "prompt": "Start with nums = [5, 10], append 15, and print Length: with len(nums).",
+          "hint": "nums = [5, 10]\nnums.append(15)\nprint(\"Length:\", len(nums))"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "1, 2, 3, 4",
+            "4",
+            "true",
+            "length 3"
+          ],
+          "codeRegex": [
+            "nums\\s*=\\s*\\[5\\s*,\\s*10\\]",
+            "nums\\.append\\(15\\)",
+            "len\\(nums\\)",
+            "Length"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s9c",
+      "section": "Section 9: Lists and For Loops",
+      "subsection": "9C. For loops and range()",
+      "kind": "lesson",
+      "title": "9C. Iterate over items and numbers",
+      "subtitle": "Tiny exercise: for loops",
+      "focus": "for loops, range(start, stop, step)",
+      "concept": "for loops iterate over sequences like lists. range() generates numbers: range(5) gives 0-4, range(5,10) gives 5-9, range(5,10,2) steps by 2.",
+      "learning": [
+        "for item in list: visits each item",
+        "for i in range(5): repeats with 0-4",
+        "range stop value is excluded"
+      ],
+      "starter": "numbers = [1, 2, 3]\nfor n in numbers:\n    print(n)\nfor i in range(3, 7):\n    print(i)",
+      "tasks": [
+        {
+          "prompt": "Use range(2, 11, 2) to print even numbers 2 to 10.",
+          "hint": "for i in range(2, 11, 2):\n    print(i)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "1",
+            "2",
+            "3",
+            "3",
+            "4",
+            "5",
+            "6",
+            "2",
+            "4",
+            "6",
+            "8",
+            "10"
+          ],
+          "codeRegex": [
+            "range\\(2\\s*,\\s*11\\s*,\\s*2\\)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s9test",
+      "section": "Section 9: Lists and For Loops",
+      "subsection": "Section 9 Test",
+      "kind": "section-test",
+      "title": "Section 9 Test: Lists and loops",
+      "subtitle": "Put it together: collections and iteration",
+      "focus": "lists, for loops, len/range basics",
+      "concept": "Use a list and a loop together to process multiple values.",
+      "learning": [
+        "Create/use a list",
+        "Loop through values",
+        "Produce correct output"
+      ],
+      "starter": "names = [\"Aroha\", \"Ben\", \"Mia\"]\n# Section 9 Test\n",
+      "tasks": [
+        {
+          "prompt": "Use a for loop to print Hello, <name> for each name in the list.",
+          "hint": "for name in names:\n    print(\"Hello, \" + name)"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Section 9 Test",
+          "expect": [
+            "hello aroha",
+            "hello ben",
+            "hello mia"
+          ],
+          "codeRegex": [
+            "for\\s+name\\s+in\\s+names",
+            "print\\(.*Hello",
+            "\\+?\\s*name|,\\s*name"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s10a",
+      "section": "Section 10: Tuples and Putting It All Together",
+      "subsection": "10A. Tuples (immutable sequences)",
+      "kind": "lesson",
+      "title": "10A. Fixed collections with tuples",
+      "subtitle": "Tiny exercise: tuple basics",
+      "focus": "tuples, immutability, count, index",
+      "concept": "Tuples are like lists but immutable (cannot be changed after creation). They use parentheses and support methods like count() and index().",
+      "learning": [
+        "Tuples use (1,2,3)",
+        "You cannot reassign tuple items",
+        "count() and index() work on tuples"
+      ],
+      "starter": "numbers = (1, 2, 3, 3)\nprint(numbers)\nprint(numbers.count(3))\nprint(numbers.index(2))",
+      "tasks": [
+        {
+          "prompt": "Create a tuple of three colours and print the tuple and the index of one colour.",
+          "hint": "colours = (\"red\", \"blue\", \"green\")\nprint(colours)\nprint(colours.index(\"blue\"))"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Task 1",
+          "expect": [
+            "1, 2, 3, 3",
+            "2",
+            "1"
+          ],
+          "codeRegex": [
+            "\\w+\\s*=\\s*\\([^\\)]*,[^\\)]*,[^\\)]*\\)",
+            "\\.index\\(",
+            "print\\(.*\\.index\\("
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s10test",
+      "section": "Section 10: Tuples and Putting It All Together",
+      "subsection": "Final Section Test",
+      "kind": "section-test",
+      "title": "Final Section Test: Mini program",
+      "subtitle": "Put it together: core Python basics",
+      "focus": "variables, input/conversion or strings, decisions, loops/lists",
+      "concept": "Create a small program that combines multiple concepts from the course (variables, strings/numbers, conditionals, and/or loops/lists).",
+      "learning": [
+        "Use at least 3 different concepts",
+        "Print clear output",
+        "Test your program with Run/Check"
+      ],
+      "starter": "# Final Test (example starter): number list total\nnumbers = [2, 4, 6]\ntotal = 0\n# add code to calculate total and print it\n",
+      "tasks": [
+        {
+          "prompt": "Use a for loop to add the numbers in the list and print Total: 12.",
+          "hint": "for n in numbers:\n    total += n\nprint(\"Total:\", str(total))"
+        }
+      ],
+      "tests": [
+        {
+          "label": "Final Test",
+          "expect": [
+            "total 12"
+          ],
+          "codeRegex": [
+            "for\\s+\\w+\\s+in\\s+numbers",
+            "total\\s*\\+=",
+            "Total"
+          ]
+        }
+      ]
+    }
+  ]
+}
