@@ -1,7 +1,7 @@
-import { createEditor, applyMonacoTheme } from "../js/editor.js";
-import { Runner } from "../js/runner.js";
-import { Terminal } from "../js/terminal.js";
-import { DebuggerView } from "../js/debugger.js";
+import { createEditor, applyMonacoTheme } from "./js/editor.js";
+import { Runner } from "./js/runner.js";
+import { Terminal } from "./js/terminal.js";
+import { DebuggerView } from "./js/debugger.js";
 
 async function loadLessons() {
   try {
